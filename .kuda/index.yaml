@@ -1,0 +1,19 @@
+name: lib-transform
+root: /home/luis/GitHub/handl-lang/lib-transform
+purpose: ''
+modules:
+- handl-lib-transform
+- lib-transform
+commands:
+- cargo check
+- cargo test --workspace
+provenance:
+  files:
+  - Cargo.toml
+  - src/lib.rs
+  hashes:
+  - 428a9eee9c908adbf1e25e9694b836ea70b20936
+  - b4f37c18cb83aebe3ae58f45f95be51b29087441
+  commit_sha: 29e15fdd0ea9c9ca526fb5956bb53ee68f397ce0
+  generated_at: '1792281230'
+  generator: kuda/0.1.0

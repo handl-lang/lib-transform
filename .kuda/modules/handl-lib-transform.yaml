@@ -1,0 +1,21 @@
+name: handl-lib-transform
+path: Cargo.toml
+purpose: 'transform: Handl stdlib port (ADR-0128 split).'
+api:
+- name: handl-lib-transform
+  kind: module
+  file: Cargo.toml
+  line: 1
+  module: handl-lib-transform
+deps: []
+notes: ''
+verify:
+- Cargo.toml
+provenance:
+  files:
+  - Cargo.toml
+  hashes:
+  - 428a9eee9c908adbf1e25e9694b836ea70b20936
+  commit_sha: 29e15fdd0ea9c9ca526fb5956bb53ee68f397ce0
+  generated_at: '1792281230'
+  generator: kuda-template/0.1.0

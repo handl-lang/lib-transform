@@ -1,0 +1,45 @@
+name: lib-transform
+path: src/lib.rs
+purpose: lib-transform
+api:
+- name: TRANSFORM_HNL
+  kind: const
+  file: src/lib.rs
+  line: 3
+  module: lib-transform
+- name: FILTER_HNL
+  kind: const
+  file: src/lib.rs
+  line: 4
+  module: lib-transform
+- name: MAP_HNL
+  kind: const
+  file: src/lib.rs
+  line: 5
+  module: lib-transform
+- name: REDUCE_HNL
+  kind: const
+  file: src/lib.rs
+  line: 6
+  module: lib-transform
+deps: []
+notes: ''
+verify:
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+- src/lib.rs
+provenance:
+  files:
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  - src/lib.rs
+  hashes:
+  - b4f37c18cb83aebe3ae58f45f95be51b29087441
+  - b4f37c18cb83aebe3ae58f45f95be51b29087441
+  - b4f37c18cb83aebe3ae58f45f95be51b29087441
+  - b4f37c18cb83aebe3ae58f45f95be51b29087441
+  commit_sha: 29e15fdd0ea9c9ca526fb5956bb53ee68f397ce0
+  generated_at: '1792281230'
+  generator: kuda-template/0.1.0
