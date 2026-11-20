@@ -2,7 +2,24 @@
 
 `transform` — Handl stdlib port (pure handl).
 
-Part of the stdlib → `lib-*` split (ADR-0128); moved from `stdlib/handl-packages/transform/`.
+## Layout
+
+```text
+src/        the .hnl sources (+ lib.rs, ops.rs)
+pkg.hnl     package manifest — modules, deps, description, license
+Cargo.toml  the crate manifest (native `transform.*` ops)
+xtask/      cargo xtask gate (fmt → clippy → test → doc)
+scripts/hnl-gate.sh   the gate
+ci.sh       bupha entry
+```
+
+## Gate
+
+```bash
+HNL=../host-cli/target/debug/hnl scripts/hnl-gate.sh
+```
+
+The Rust crate gates via `cargo xtask gate`.
 
 ## License
 
