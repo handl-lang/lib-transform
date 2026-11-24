@@ -1,0 +1,16 @@
+# lib-transform atom spec (P-013/T-151) — List transform ops — native impls in the lib-transform crate (`transform_op_registry`); impl keys are the `handle ... with` hints (rust_ prefix dropped).
+# `sig` = handl signature (~> canonical), `impl` = key for the
+# module's impl table, `total` replaces `guarantee: True` decl
+# clauses. Generated from the cap/op/handle triples in
+# src/index.hnl.
+module: transform
+atoms:
+  - name: transform.map
+    sig: "(Value * Value) ~> Value"
+    impl: fn_map
+  - name: transform.filter
+    sig: "(Value * Value) ~> Value"
+    impl: fn_filter
+  - name: transform.reduce
+    sig: "(Value * Value * Value) ~> Value"
+    impl: fn_reduce
