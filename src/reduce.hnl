@@ -14,7 +14,7 @@
 --- `[[], "seed", [acc, x] ~> acc] >>> transform.reduce`
 --- -- => "seed"
 ---
-export reduce :: [xs, init, f] ~> {
+export reduce := [xs, init, f] ~> {
   while { xs: xs, acc: init } {
     [xs, acc] ~> match xs {
       []: { out: acc },

@@ -9,8 +9,8 @@
 --- `[[1, 2, 3, 4], x ~> x % 2 == 0] >>> transform.filter`
 --- -- => [2, 4]
 ---
-export filter :: do {
-  rev :: xs ~> {
+export filter := do {
+  rev := xs ~> {
     while { xs: xs, acc: [] } {
       [xs, acc] ~> match xs {
         []: { out: acc },
