@@ -1,19 +1,23 @@
 name: lib-transform
 root: /home/luis/GitHub/handl-lang/lib-transform
-purpose: ''
+purpose: '`transform` — Handl stdlib port (pure handl).'
 modules:
 - handl-lib-transform
-- lib-transform
+- xtask
 commands:
 - cargo check
 - cargo test --workspace
+tree_digest: 4970c8fd43b78fb3fbd43ea1ea738a75b3d28322
+files_total: 5
 provenance:
   files:
   - Cargo.toml
-  - src/lib.rs
+  - README.md
+  - xtask/Cargo.toml
   hashes:
-  - 428a9eee9c908adbf1e25e9694b836ea70b20936
-  - b4f37c18cb83aebe3ae58f45f95be51b29087441
-  commit_sha: 29e15fdd0ea9c9ca526fb5956bb53ee68f397ce0
-  generated_at: '1792281230'
+  - f7d52a31d4b291217332d5eb0c22c12d495e6355
+  - 13a85f42bf38b140207f6169dc212c724afbfd33
+  - 56825fa02f4bcfa4409922455217615ea0d9d5f0
+  commit_sha: 2095aee785eef34046e4df9e5bcff82411b4de07
+  generated_at: '1795484421'
   generator: kuda/0.1.0

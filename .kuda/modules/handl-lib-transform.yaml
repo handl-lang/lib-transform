@@ -1,21 +1,97 @@
 name: handl-lib-transform
 path: Cargo.toml
-purpose: 'transform: Handl stdlib port (ADR-0128 split).'
+purpose: 'transform: Handl stdlib port.'
 api:
+- name: FILTER_HNL
+  kind: const
+  file: src/lib.rs
+  line: 13
+  module: handl-lib-transform
+- name: Filter
+  kind: type
+  file: src/ops.rs
+  line: 52
+  module: handl-lib-transform
+- name: MAP_HNL
+  kind: const
+  file: src/lib.rs
+  line: 14
+  module: handl-lib-transform
+- name: Map
+  kind: type
+  file: src/ops.rs
+  line: 29
+  module: handl-lib-transform
+- name: REDUCE_HNL
+  kind: const
+  file: src/lib.rs
+  line: 15
+  module: handl-lib-transform
+- name: Reduce
+  kind: type
+  file: src/ops.rs
+  line: 75
+  module: handl-lib-transform
+- name: TRANSFORM_HNL
+  kind: const
+  file: src/lib.rs
+  line: 12
+  module: handl-lib-transform
+- name: TRANSFORM_OPS
+  kind: const
+  file: src/ops.rs
+  line: 96
+  module: handl-lib-transform
+- name: call
+  kind: function
+  file: src/ops.rs
+  line: 31
+  module: handl-lib-transform
+- name: call
+  kind: function
+  file: src/ops.rs
+  line: 54
+  module: handl-lib-transform
+- name: call
+  kind: function
+  file: src/ops.rs
+  line: 77
+  module: handl-lib-transform
 - name: handl-lib-transform
   kind: module
   file: Cargo.toml
   line: 1
   module: handl-lib-transform
-deps: []
+- name: ops
+  kind: module
+  file: src/lib.rs
+  line: 8
+  module: handl-lib-transform
+- name: transform_op_registry
+  kind: function
+  file: src/ops.rs
+  line: 98
+  module: handl-lib-transform
+deps:
+- handl-lib-ops
+- handl-ops
+- serde_json
+- handl_ops
+- ops
 notes: ''
 verify:
 - Cargo.toml
+- src/lib.rs
+- src/ops.rs
 provenance:
   files:
   - Cargo.toml
+  - src/lib.rs
+  - src/ops.rs
   hashes:
-  - 428a9eee9c908adbf1e25e9694b836ea70b20936
-  commit_sha: 29e15fdd0ea9c9ca526fb5956bb53ee68f397ce0
-  generated_at: '1792281230'
-  generator: kuda-template/0.1.0
+  - f7d52a31d4b291217332d5eb0c22c12d495e6355
+  - 24251139e5117656eb834b3f9e490bfb66e1b7a0
+  - ca19cb934e8fb88879bbc3c2d08869b687f4d8f9
+  commit_sha: 2095aee785eef34046e4df9e5bcff82411b4de07
+  generated_at: '1795484421'
+  generator: kuda-template/0.1.4
