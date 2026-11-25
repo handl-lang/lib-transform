@@ -1,3 +1,34 @@
+# lib-transform
+
+`transform` — Handl stdlib port: the transform port (map/filter/
+reduce) — pure handl plus the Rust crate providing native
+`transform.*` ops.
+
+## Layout
+
+| path | role |
+| --- | --- |
+| `src/index.hnl` | the interface |
+| `src/map.hnl`, `filter.hnl`, `reduce.hnl` | the transform modules |
+| `src/lib.rs`, `src/ops.rs` | the Rust crate (native `transform.*` ops) |
+| `atoms.yaml`, `Cargo.toml`, `xtask/` | atoms / manifest / `cargo xtask` gate |
+| `pkg.hnl`, `scripts/hnl-gate.sh`, `ci.sh` | manifest / hnl gate / bupha entry |
+
+## Contract
+
+- Transitional layout: `.hnl` surface + native Rust ops behind it.
+
+## Verification
+
+```bash
+HNL=../host-cli/target/debug/hnl scripts/hnl-gate.sh
+cargo xtask gate        # the Rust crate side
+```
+
+## License
+
+MIT.
+
 <!-- myco:agent-awareness -->
 
 ## Agent awareness
