@@ -8,7 +8,7 @@ reduce) — pure handl plus the Rust crate providing native
 
 | path | role |
 | --- | --- |
-| `src/index.hnl` | the interface |
+| `src/index.hnl` | the interface — documentation surface; atom spec in `atoms.yaml` (P-013/T-151) |
 | `src/map.hnl`, `filter.hnl`, `reduce.hnl` | the transform modules |
 | `src/lib.rs`, `src/ops.rs` | the Rust crate (native `transform.*` ops) |
 | `atoms.yaml`, `Cargo.toml`, `xtask/` | atoms / manifest / `cargo xtask` gate |
@@ -16,7 +16,10 @@ reduce) — pure handl plus the Rust crate providing native
 
 ## Contract
 
-- Transitional layout: `.hnl` surface + native Rust ops behind it.
+- Spec-driven layout: `atoms.yaml` is the spec; the native `Op`
+  impls live in `src/ops.rs` and resolve via the host's
+  `transform_impls()` table (`plugin-lib-stdlib`
+  `ops/kernel_impls.rs`).
 
 ## Verification
 
