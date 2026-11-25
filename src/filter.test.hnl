@@ -1,0 +1,15 @@
+--- transform.filter -- smoke coverage: predicate filter over a list.
+---
+--- `filter(xs, p)` keeps the elements `p` accepts, order preserved.
+--- `str.is_empty` stands in for `p` (canonical dialect — see map.test).
+
+from "./filter" import * as m
+from "str" import * as str
+
+test_filter_basic := assert m.filter(["", "x", "", "y"], str.is_empty) == ["", ""]
+
+test_filter_none := assert m.filter(["a", "b"], str.is_empty) == []
+
+test_filter_all := assert m.filter(["", ""], str.is_empty) == ["", ""]
+
+test_filter_empty := assert m.filter([], str.is_empty) == []

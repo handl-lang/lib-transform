@@ -1,0 +1,13 @@
+--- transform.reduce -- smoke coverage: left fold with init.
+---
+--- `reduce(xs, init, f)` computes `f(...f(f(init, x1), x2)..., xn)`;
+--- empty `xs` returns `init`. `str.concat` (`a + b`) stands in for `f`.
+
+from "./reduce" import * as m
+from "str" import * as str
+
+test_reduce_sum := assert m.reduce([1, 2, 3], 0, str.concat) == 6
+
+test_reduce_empty := assert m.reduce([], "seed", str.concat) == "seed"
+
+test_reduce_single := assert m.reduce([7], 1, str.concat) == 8

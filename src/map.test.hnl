@@ -1,0 +1,14 @@
+--- transform.map -- smoke coverage: order-preserving map over a list.
+---
+--- `map(xs, f)` applies `f` to each element left-to-right. The `str`
+--- arrows stand in for `f` so this suite stays canonical-dialect —
+--- the gate only runs canonical `*.test.hnl` files.
+
+from "./map" import * as m
+from "str" import * as str
+
+test_map_lengths := assert m.map(["a", "bb", "ccc"], str.length) == [1, 2, 3]
+
+test_map_empty := assert m.map([], str.length) == []
+
+test_map_single := assert m.map(["xy"], str.length) == [2]
