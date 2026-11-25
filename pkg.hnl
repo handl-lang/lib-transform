@@ -1,1 +1,1 @@
-{ modules: ["transform"], description: "The transform port — pure handl.", license: "MIT" }
+{ modules: ["transform"], name: "transform", description: "The transform port — pure handl.", license: "MIT" }
