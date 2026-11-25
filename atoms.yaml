@@ -1,8 +1,10 @@
 # lib-transform atom spec (P-013/T-151) — List transform ops — native impls in the lib-transform crate (`transform_op_registry`); impl keys are the `handle ... with` hints (rust_ prefix dropped).
 # `sig` = handl signature (~> canonical), `impl` = key for the
 # module's impl table, `total` replaces `guarantee: True` decl
-# clauses. Generated from the cap/op/handle triples in
-# src/index.hnl.
+# clauses. This file IS the spec (the cap/op/handle decl triples were
+# stripped from src/index.hnl in the T-151 migration); the `impl:`
+# keys resolve against the host's `transform_impls` table in
+# plugin-lib-stdlib `ops/kernel_impls.rs).
 module: transform
 atoms:
   - name: transform.map

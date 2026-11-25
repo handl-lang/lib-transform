@@ -1,12 +1,15 @@
 --- transform -- list transform ops for the handl runtime.
 ---
---- Single source of truth for the `transform` interface: list-to-list and
+--- Documentation surface for the `transform` interface: list-to-list and
 --- fold operations (`map`, `filter`, `reduce`). The canonical pure-handl
---- implementations live alongside this contract in `map.hnl`,
---- `filter.hnl`, and `reduce.hnl`, loaded per-file by `kit-canonical`'s
---- `TransformModule`. Kits without the canonical wiring (e.g. those using
---- `plugin-lib-utils`) register the native `rust_fn_*` handls declared
---- below instead.
+--- implementations live alongside this file in `map.hnl`, `filter.hnl`,
+--- and `reduce.hnl` (the per-arrow payload, re-exported as
+--- `TRANSFORM_*_HNL` consts). The atom spec lives in `atoms.yaml`
+--- (P-013/T-151) — name/sig/impl per op — and the native `Op` impls are
+--- in `src/ops.rs`; the host's spec-driven `transform_impls()` table
+--- (`plugin-lib-stdlib` `ops/kernel_impls.rs`) is what the `transform`
+--- `ModuleSpec` consumes. `transform_op_registry()` stays for consumers
+--- that still use it directly.
 ---
 --- ## Capability declarations (ADR-0077 Phase 4)
 --- transform.map -- map a function over a list.
