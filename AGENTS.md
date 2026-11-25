@@ -12,7 +12,7 @@ reduce) — pure handl plus the Rust crate providing native
 | `src/map.hnl`, `filter.hnl`, `reduce.hnl` | the transform modules |
 | `src/lib.rs`, `src/ops.rs` | the Rust crate (native `transform.*` ops) |
 | `atoms.yaml`, `Cargo.toml`, `xtask/` | atoms / manifest / `cargo xtask` gate |
-| `pkg.hnl`, `scripts/hnl-gate.sh`, `ci.sh` | manifest / hnl gate / bupha entry |
+| `pkg.hnl`, `scripts/hnl-gate.sh`, `workflows/gate.yaml` | manifest / hnl gate / bupha entry |
 
 ## Contract
 
